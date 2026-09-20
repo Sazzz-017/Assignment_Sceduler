@@ -26,6 +26,53 @@ at the database, not just in the UI. (Proven by an 8-way concurrency test in
 
 ---
 
+## How to use
+
+> Replace `<your-site-url>` with your live site (e.g. your Vercel URL). The professor's
+> passcode is set by the `APP_ADMIN_PASSCODE` environment variable on the backend — it is
+> **not** stored in this repo. Keep it private and share it with no one but the instructor.
+
+### For the professor (admin)
+
+1. **Open the admin area:** go to `<your-site-url>/admin`.
+2. **Sign in:** enter the admin passcode (`APP_ADMIN_PASSCODE`) → **Unlock**.
+   `<ADMIN_PASSCODE_PLACEHOLDER>`
+3. **Create a session:** in **New session**, enter a title (e.g. "Final Demos"), pick a
+   type — **Presentation / demo** or **Consultation / meeting** — add an optional
+   description, then **Create session**.
+4. **Add time slots:** with the session selected, use **Add a slot** to set each slot's
+   start date & time, its length in minutes, and an optional label (e.g. a room). Repeat
+   for every slot you want to offer. (Slots are added one at a time.)
+5. **Share the link:** give students `<your-site-url>` (the home page). They pick the
+   session and book — no login needed.
+6. **Track & manage bookings:** open a session to see who booked each slot. You can:
+   - **Clear** any booking (frees the slot for someone else),
+   - **Delete** a slot, or **Delete session** entirely,
+   - **Export CSV** to download all bookings (name, members, meeting link, time).
+7. **Join a meeting:** if a student attached a Google Meet link, a **↗ Join meeting**
+   link appears on that slot — click it at the scheduled time.
+8. **Sign out** when done (top-right of the admin page).
+
+> Tip: if the site was idle, the first load after a while can take up to ~1 minute while
+> the backend wakes — open it a couple of minutes before you announce booking.
+
+### For students
+
+1. **Open the site:** go to `<your-site-url>` (the link your instructor shares).
+2. **Pick a session:** each card shows the type (presentation or consultation) and how
+   many slots are still free. Click the one you need.
+3. **Book a slot:** on an available time, click **Book**, enter your **name or group
+   name** (and optional member names if it's a group), then **Confirm booking**.
+   - You can hold **one booking per session**. If a slot was just taken by someone else,
+     you'll get a message — simply pick another.
+4. **Add your Google Meet link:** on your booked slot, click **Add Meet link**, paste your
+   meeting URL (must start with `https://`), and **Save**. This is what the instructor
+   clicks to join at your time. You can **Edit link** later.
+5. **Change your mind?** click **Release** on your slot to free it, then book a different
+   one. (You can only release a booking made under the same name you enter.)
+
+---
+
 ## Run locally
 
 ### 1. Backend (port 8080)

@@ -37,6 +37,13 @@ export default function App() {
         <Route path="/events/:id" element={<EventDetailPage />} />
         <Route path="/admin" element={<AdminPage />} />
       </Routes>
+
+      <footer className="site-foot">
+        <span className="site-foot__rule" />
+        <span className="site-foot__text">
+          Developed by <strong>Saptarshi</strong>
+        </span>
+      </footer>
     </div>
   )
 }

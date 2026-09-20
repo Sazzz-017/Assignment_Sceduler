@@ -750,6 +750,36 @@ button {
   align-items: center;
 }
 
+/* ---------- Site footer ---------- */
+.site-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 64px;
+  padding-top: 4px;
+}
+
+.site-foot__rule {
+  width: 44px;
+  height: 2px;
+  background: var(--cobalt);
+  opacity: 0.55;
+}
+
+.site-foot__text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.site-foot__text strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
 /* ---------- Animations ---------- */
 @keyframes rise {
   from {
