@@ -41,7 +41,7 @@ export default function App() {
       <footer className="site-foot">
         <span className="site-foot__rule" />
         <span className="site-foot__text">
-          Developed by <strong>Saptarshi</strong>
+          Developed by <strong>Saptarshi + Claude</strong> 😜
         </span>
       </footer>
     </div>
